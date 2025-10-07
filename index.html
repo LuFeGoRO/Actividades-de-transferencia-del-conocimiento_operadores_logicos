@@ -9,22 +9,27 @@
     
 </body>
 <script>
-console.log(`
-1. Acceso a un sistema
-Un sistema debe permitir el acceso a un usuario si cumple
- estas condiciones:
-• El nombre de usuario es "admin".
-• La contraseña es "1234".
-Si no cumple las dos condiciones, debe mostrar "Acceso denegado".`);
-let entrada_usuario,entrada_contraceña;
-console.log(`ingrese su usuario y contraseña para entrar al sistema`);
-entrada_usuario=prompt("ingrese su usuario");
-entrada_contraceña=parseInt(prompt("ingrese su contraceña"));
-if ((entrada_usuario==="admin") && (entrada_contraceña==1234)) {
-    console.log("ingreso exitoso");
-} else {
-    console.log("acceso denegado");
-}
+// console.log(`
+// 1. Acceso a un sistema
+// Un sistema debe permitir el acceso a un usuario si cumple
+//  estas condiciones:
+// • El nombre de usuario es "admin".
+// • La contraseña es "1234".
+// Si no cumple las dos condiciones, debe mostrar "Acceso denegado"
+// Pregunta de análisis: ¿Qué operador lógico usarías para verificar que se cumplan
+// ambas condiciones? usaria el "y" para que con solo una entrada falsa 
+// la condicion maruqe falsa, debido a que la verificacion de una contraceña
+// consta de esos dos importantes datos el usuario y que coinsida con la
+// contraceña`);
+// let entrada_usuario,entrada_contraceña;
+// console.log(`ingrese su usuario y contraseña para entrar al sistema`);
+// entrada_usuario=prompt("ingrese su usuario");
+// entrada_contraceña=parseInt(prompt("ingrese su contraceña"));
+// if ((entrada_usuario==="admin") && (entrada_contraceña==1234)) {
+//     console.log("ingreso exitoso");
+// } else {
+//     console.log("acceso denegado");
+// }
 
 console.log(`2. Calcular precio de entradas al cine
 Un cine aplica las siguientes reglas:
@@ -37,14 +42,51 @@ al valor de la entrada.
 Pregunta de análisis: ¿Qué estructura condicional usarías para resolver este caso: if-
 else if-else o switch? ¿Por qué?
 `);
-let  entrada_usuario, entrada_contraceña;
-console.log(`ingrese su usuario y contraseña para entrar al sistema`);
-entrada_usuario=prompt("ingrese su usuario");
-entrada_contraceña=parseInt(prompt("ingrese su contraceña"));
-if ((entrada_usuario==="admin") && (entrada_contraceña==1234)) {
-    console.log("ingreso exitoso");
-} else {
-    console.log("acceso denegado");
+alert(`cineopolis tiene estas promociones
+• Si el cliente tiene menos de 12 años, el valor de la entrada es 5000.
+• Si tiene entre 12 y 18 años, el valor es 8000.
+• Si es mayor de 18, el valor es 10000.
+• Si es estudiante se le aplica un descuento del 20%
+al valor de la entrada.
+`)
+// declaro variaables
+let edad, confirmacion_de_si_es_estudiante,promocion, valor_con_descuento;
+// declaro constantes
+const VALOR1=5000, VALOR2=8000, VALOR3=10000, DESCUENTO=0.20;
+// genero un promt par asignar un valor que sea entero a la varianle edad
+edad=parseInt(prompt(`ingrese su edad para saber el precio de su entrada.`))
+// genero un prompt para psefir confirmacion "si o no" 
+confirmacion_de_si_es_estudiante=prompt(`es estudiante? 
+responda si o no`)
+// inicio de condicional estima la confirmacion y el rango de edad 
+if ((confirmacion_de_si_es_estudiante=="no")&&(edad<12)) {
+// si la edad es menor a 12 y no es estudiante muetra el siguiente mensaje
+    console.log(`segun tu edad ${edad} años, valor de la entrada es: ${VALOR1}`);
+}else if((confirmacion_de_si_es_estudiante=="si")&&(edad<12)){
+    // si la edad es menor a 12 y si es estudiante calcula el descuento y muestra el siguiente mensaje 
+    promocion=VALOR1*DESCUENTO;
+    valor_con_descuento=VALOR1-promocion;
+    console.log(`genial eres estudiante y ahora segun tu edad ${edad} años, valor de la entrada es: ${valor_con_descuento}`);
+
+} else if((confirmacion_de_si_es_estudiante=="no")&&(edad>=12)&&(edad<=18)){
+    // si la edad es mayor a 12 y menor a 18 y no es estudiante muetra el siguiente mensaje
+ console.log(`segun tu edad ${edad} años, valor de la entrada es: ${VALOR2}`);
+}else if((confirmacion_de_si_es_estudiante=="si")&&(edad>=12)&&(edad<=18)){
+     // si la edad es mayor a 12 y menor a 18 y si es estudiante calcula el descuento y muestra el siguiente mensaje 
+    promocion=VALOR2*DESCUENTO;
+    valor_con_descuento=VALOR2-promocion;
+    console.log(`genial eres estudiante y ahora segun tu edad ${edad} años, valor de la entrada es: ${valor_con_descuento}`);
+
+}else if((confirmacion_de_si_es_estudiante=="no")&&(edad>18)){
+     // si la edad es mayor a 18 y no es estudiante muestra el siguiente mensaje 
+    console.log(`segun tu edad ${edad} años, valor de la entrada es: ${VALOR3}`);
+}else if((confirmacion_de_si_es_estudiante=="si")&&(edad>18)){
+     // si la edad es menor a 12 y si es estudiante calcula el descuento y muestra el siguiente mensaje 
+    promocion=VALOR3*DESCUENTO;
+    valor_con_descuento=VALOR3-promocion;
+    console.log(`genial eres estudiante y ahora segun tu edad ${edad} años, valor de la entrada es: ${valor_con_descuento}`);
 }
+
+
 </script>
 </html>
