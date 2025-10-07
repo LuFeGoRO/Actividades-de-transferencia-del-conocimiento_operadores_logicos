@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades-de-transferencia-del-conocimiento_operadores_logicos</title>
+</head>
+<body>
+    
+</body>
+<script>
+console.log(`
+1. Acceso a un sistema
+Un sistema debe permitir el acceso a un usuario si cumple
+ estas condiciones:
+• El nombre de usuario es "admin".
+• La contraseña es "1234".
+Si no cumple las dos condiciones, debe mostrar "Acceso denegado".`);
+let entrada_usuario,entrada_contraceña;
+console.log(`ingrese su usuario y contraseña para entrar al sistema`);
+entrada_usuario=prompt("ingrese su usuario");
+entrada_contraceña=parseInt(prompt("ingrese su contraceña"));
+if ((entrada_usuario==="admin") && (entrada_contraceña==1234)) {
+    console.log("ingreso exitoso");
+} else {
+    console.log("acceso denegado");
+}
+
+console.log(`2. Calcular precio de entradas al cine
+Un cine aplica las siguientes reglas:
+• Si el cliente tiene menos de 12 años, el valor de la entrada es 5000.
+• Si tiene entre 12 y 18 años, el valor es 8000.
+• Si es mayor de 18, el valor es 10000.
+• Si el cliente es estudiante (condición adicional), se le aplica un descuento del 20%
+al valor de la entrada.
+
+Pregunta de análisis: ¿Qué estructura condicional usarías para resolver este caso: if-
+else if-else o switch? ¿Por qué?
+`);
+let  entrada_usuario, entrada_contraceña;
+console.log(`ingrese su usuario y contraseña para entrar al sistema`);
+entrada_usuario=prompt("ingrese su usuario");
+entrada_contraceña=parseInt(prompt("ingrese su contraceña"));
+if ((entrada_usuario==="admin") && (entrada_contraceña==1234)) {
+    console.log("ingreso exitoso");
+} else {
+    console.log("acceso denegado");
+}
+</script>
+</html>
